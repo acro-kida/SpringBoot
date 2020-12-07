@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>SpringBoot Example</title>
+	<style>
+		h1 { font-size: 18pt; font-weight: bold; color: gray;}
+		body { font-size: 13pt; color: gray; margin: 5px 25px;}
+		pre { font-size: 13pt; color: gray; padding: 5px 10px; border: 1px solid gray;}
+		tr { margin: 5px; }
+		th { padding: 5px; color: white; background: darkgray; }
+		td { padding: 5px; color: black; background: #f0f0f0; }
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>PRICE</th>
+		</tr>
+		<tr th:each="obj : ${data}">
+			<td th:text="${obj.id}"></td>
+			<td th:text="${obj.name}"></td>
+			<td th:text="${obj.price}"></td>
+		</tr>
+	</table>
+</body>
+</html>
